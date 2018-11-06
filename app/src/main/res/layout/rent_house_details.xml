@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.elookups.tenanttrackingapplication.RentHistory">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/rellayform"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/fab_margin"
+                android:background="#b971e7">
+
+                <ImageView
+                    android:id="@+id/houseImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/nav_header_height"
+                    android:layout_gravity="right"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/sample" />
+
+                <TextView
+                    android:id="@+id/houseAddresslab"
+                    android:text="House Address:- "
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/houseImage"
+                    android:textSize="13sp"
+                    android:textColor="#f9f8ed" />
+
+                <TextView
+                    android:id="@+id/houseAddress"
+                    android:text="Rent House Address Follows Here"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/houseAddresslab"
+                    android:textSize="16sp"
+                    android:textColor="#f9f8ed" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/tenantRel"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/fab_margin"
+                android:background="#b971e7">
+
+                <ImageView
+                    android:id="@+id/tenantImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/nav_header_height"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/sample"/>
+
+                <TextView
+                    android:id="@+id/tenant"
+                    android:text="Tenant Name:- "
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tenantImage"
+                    android:textSize="13sp"
+                    android:textColor="#f9f8ed" />
+
+                <TextView
+                    android:id="@+id/tenantName"
+                    android:text="Your Good Name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tenant"
+                    android:textSize="16sp"
+                    android:textColor="#f9f8ed" />
+
+            </RelativeLayout>
+
+            <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="*"
+                android:padding="@dimen/fab_margin"
+                android:background="#b971e7">
+
+                <TableRow>
+                    <TextView
+                        android:layout_column="0"
+                        android:text="House Size"
+                        android:textSize="16sp"
+                        android:textColor="#f9f8ed"
+                        android:gravity="left"/>
+                    <TextView
+                        android:layout_column="1"
+                        android:id="@+id/houseSize"
+                        android:text="1BHK"
+                        android:textSize="16sp"
+                        android:textColor="#f9f8ed"
+                        android:gravity="left"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_column="0"
+                        android:text="Availability"
+                        android:textSize="16sp"
+                        android:textColor="#f9f8ed"
+                        android:gravity="left"/>
+                    <TextView
+                        android:layout_column="1"
+                        android:id="@+id/availability"
+                        android:text="Occupied"
+                        android:textSize="16sp"
+                        android:textColor="#f9f8ed"
+                        android:gravity="left"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_column="0"
+                        android:text="Rent Mode"
+                        android:textSize="16sp"
+                        android:textColor="#f9f8ed"
+                        android:gravity="left"
+                        android:id="@+id/rentMode1"/>
+
+                    <TextView
+                        android:layout_column="1"
+                        android:id="@+id/rentMode"
+                        android:text="Shared"
+                        android:textSize="16sp"
+                        android:textColor="#f9f8ed"
+                        android:gravity="left"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_column="0"
+                        android:text="Rent Mode"
+                        android:textSize="16sp"
+                        android:textColor="#f9f8ed"
+                        android:visibility="gone"
+                        android:gravity="left"
+                        android:id="@+id/rentMode2"/>
+
+                    <Spinner
+                        android:layout_column="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rentModeSpinner"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:background="#fffffe"
+                        android:visibility="gone"
+                        android:entries="@array/rent_mode_spinner" />
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_column="0"
+                        android:text="Max. Size (Shared)"
+                        android:textSize="16sp"
+                        android:textColor="#f9f8ed"
+                        android:gravity="left"/>
+                    <TextView
+                        android:layout_column="1"
+                        android:id="@+id/allowedSize"
+                        android:text="5 Persons"
+                        android:textSize="16sp"
+                        android:textColor="#f9f8ed"
+                        android:gravity="left"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_column="0"
+                        android:text="Rent Price"
+                        android:textSize="16sp"
+                        android:textColor="#f9f8ed"
+                        android:gravity="left"/>
+                    <TextView
+                        android:layout_column="1"
+                        android:id="@+id/soloRentPrice"
+                        android:text="15000/-"
+                        android:textSize="16sp"
+                        android:textColor="#f9f8ed"
+                        android:gravity="left"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_column="0"
+                        android:text="Rent Price (Shared)"
+                        android:textSize="16sp"
+                        android:textColor="#f9f8ed"
+                        android:gravity="left"/>
+                    <TextView
+                        android:layout_column="1"
+                        android:id="@+id/sharedRentPrice"
+                        android:text="2000/- Per Head"
+                        android:textSize="16sp"
+                        android:textColor="#f9f8ed"
+                        android:gravity="left"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_column="0"
+                        android:text="Advance"
+                        android:textSize="16sp"
+                        android:textColor="#f9f8ed"
+                        android:gravity="left"/>
+                    <TextView
+                        android:layout_column="1"
+                        android:id="@+id/advanceAmount"
+                        android:text="100.000/-"
+                        android:textSize="16sp"
+                        android:textColor="#f9f8ed"
+                        android:gravity="left"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_column="0"
+                        android:text="Advance (Shared)"
+                        android:textSize="16sp"
+                        android:textColor="#f9f8ed"
+                        android:gravity="left"/>
+                    <TextView
+                        android:layout_column="1"
+                        android:id="@+id/advanceShared"
+                        android:text="10.000/- Per Head"
+                        android:textSize="16sp"
+                        android:textColor="#f9f8ed"
+                        android:gravity="left"/>
+                </TableRow>
+
+            </TableLayout>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/fab_margin"
+                android:background="#b971e7">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add New Tenant"
+                    android:id="@+id/addNewTenant"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Remove Tenant From This House"
+                    android:id="@+id/removeTenantFromThisHouse"
+                    android:layout_below="@+id/addNewTenant"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Edit Details For This House"
+                    android:id="@+id/editDetailsForThisHouse"
+                    android:layout_below="@+id/removeTenantFromThisHouse" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Show Tenant Details"
+                    android:id="@+id/showTenantDetails"
+                    android:layout_below="@+id/editDetailsForThisHouse" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</android.support.design.widget.CoordinatorLayout>
+

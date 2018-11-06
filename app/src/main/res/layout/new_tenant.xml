@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.elookups.tenanttrackingapplication.NewTenant">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/rellayform"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/fab_margin"
+                android:paddingLeft="@dimen/fab_margin"
+                android:paddingRight="@dimen/fab_margin"
+                android:background="#b971e7">
+
+                <ImageView
+                    android:id="@+id/houseImages"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/nav_header_height"
+                    android:layout_gravity="right"
+                    android:scaleType = "fitXY"
+                    android:src="@drawable/sample" />
+
+                <TextView
+                    android:id="@+id/houseAddressLable"
+                    android:text="House Address:- "
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/houseImages"
+                    android:textSize="13sp"
+                    android:textColor="#f9f8ed" />
+
+                <TextView
+                    android:id="@+id/houseAddress"
+                    android:text="#72, Terracon Residencial Layout, Kittiganahalli, Bommasandra Post, Bangalore 560099"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/houseAddressLable"
+                    android:textSize="16sp"
+                    android:textColor="#f9f8ed" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/fab_margin"
+                android:paddingLeft="@dimen/fab_margin"
+                android:paddingRight="@dimen/fab_margin"
+                android:background="#b971e7">
+
+                <ImageView
+                    android:id="@+id/newTenantImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/nav_header_height"
+                    android:layout_gravity="center"
+                    android:scaleType = "fitXY"
+                    android:src="@drawable/sample"/>
+
+                <TextView
+                    android:id="@+id/tenant"
+                    android:text="Tenant Name:- "
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/newTenantImage"
+                    android:textSize="13sp"
+                    android:textColor="#f9f8ed" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/fab_margin"
+                    android:inputType="textPersonName"
+                    android:text=""
+                    android:ems="10"
+                    android:id="@+id/newTenantName"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@id/tenant"
+                    android:textSize="16sp"
+                    android:background="#f9f8ed"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/attchImages"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/fab_margin"
+                android:paddingLeft="@dimen/fab_margin"
+                android:paddingRight="@dimen/fab_margin"
+                android:background="#b971e7">
+
+            </LinearLayout>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/fab_margin"
+                android:paddingRight="@dimen/fab_margin"
+                android:background="#b971e7">
+
+                <ImageView
+                    android:id="@+id/newAttachImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/nav_header_height"
+                    android:layout_gravity="center"
+                    android:scaleType = "fitXY"
+                    android:src="@drawable/sample"/>
+
+                <TextView
+                    android:id="@+id/attach"
+                    android:text="Attachement Name:- "
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/newAttachImage"
+                    android:textSize="13sp"
+                    android:textColor="#f9f8ed" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/fab_margin"
+                    android:inputType="textPersonName"
+                    android:text=""
+                    android:ems="10"
+                    android:id="@+id/newAttachName"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@id/attach"
+                    android:textSize="16sp"
+                    android:background="#f9f8ed"/>
+
+            </RelativeLayout>
+
+            <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="*"
+                android:padding="@dimen/fab_margin"
+                android:background="#b971e7">
+
+
+                <TableRow>
+                    <TextView
+                        android:layout_column="0"
+                        android:text="Join Date:-"
+                        android:textSize="16sp"
+                        android:textColor="#f9f8ed"
+                        android:gravity="left"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:ems="10"
+                        android:id="@+id/newJoinDate"
+                        android:clickable="true"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:background="#fffffe"
+                        android:layout_marginBottom="2dp"
+                        android:layout_column="1" />
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_column="0"
+                        android:text="Total Rent Agreed"
+                        android:textSize="16sp"
+                        android:textColor="#f9f8ed"
+                        android:gravity="left"/>
+                    <EditText
+                        android:layout_column="1"
+                        android:id="@+id/newTotalRentAgreed"
+                        android:text="2000"
+                        android:ems="10"
+                        android:textSize="16sp"
+                        android:background="#fffffe"
+                        android:layout_marginBottom="2dp"
+                        android:inputType="numberDecimal" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_column="0"
+                        android:text="Rent Effective From"
+                        android:textSize="16sp"
+                        android:textColor="#f9f8ed"
+                        android:gravity="left"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:ems="10"
+                        android:id="@+id/newRentEffectiveFrom"
+                        android:clickable="true"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:background="#fffffe"
+                        android:layout_marginBottom="2dp"
+                        android:layout_column="1" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_column="0"
+                        android:text="Previous Dues:-"
+                        android:textSize="16sp"
+                        android:textColor="#f9f8ed"
+                        android:gravity="left"/>
+                    <EditText
+                        android:layout_column="1"
+                        android:id="@+id/newPreviousDues"
+                        android:text="0"
+                        android:ems="10"
+                        android:textSize="16sp"
+                        android:background="#fffffe"
+                        android:layout_marginBottom="2dp"
+                        android:inputType="numberDecimal" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_column="0"
+                        android:text="Advance Received:-"
+                        android:textSize="16sp"
+                        android:textColor="#f9f8ed"
+                        android:gravity="left"/>
+                    <EditText
+                        android:layout_column="1"
+                        android:id="@+id/newAdvanceReceived"
+                        android:text="100000"
+                        android:ems="10"
+                        android:textSize="16sp"
+                        android:background="#fffffe"
+                        android:layout_marginBottom="2dp"
+                        android:inputType="numberDecimal" />
+                </TableRow>
+
+            </TableLayout>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/fab_margin"
+                android:background="#b971e7">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Save"
+                    android:id="@+id/saveNewTenant"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Update"
+                    android:visibility="invisible"
+                    android:id="@+id/updateNewTenant"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</android.support.design.widget.CoordinatorLayout>
+

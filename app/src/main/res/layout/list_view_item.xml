@@ -1,0 +1,65 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rellayform"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/fab_margin"
+    android:background="#b971e7">
+
+    <ImageView
+        android:id="@+id/img_view"
+        android:layout_width="@dimen/nav_header_height"
+        android:layout_height="@dimen/nav_header_height"
+        android:layout_gravity="right"
+        android:src="@drawable/sample"
+        android:longClickable="false"
+        android:clickable="false"
+        android:scaleType = "fitXY"
+        android:onClick="imgload" />
+
+    <TextView
+        android:id="@+id/heading_txt"
+        android:text="House Address:- "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/img_view"
+        android:textSize="13sp"
+        android:textColor="#f9f8ed" />
+
+    <TextView
+        android:id="@+id/text_value"
+        android:text="#23/183, Narayanappa Layout, Allalasandra, GKVK Post, Bangalore 560065"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/img_view"
+        android:layout_below="@id/heading_txt"
+        android:textSize="16sp"
+        android:textColor="#f9f8ed" />
+
+    <TextView
+        android:id="@+id/pending_due_hd"
+        android:text="House Address:- "
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/img_view"
+        android:layout_below="@id/text_value"
+        android:textSize="13sp"
+        android:textColor="#f9f8ed" />
+
+    <TextView
+        android:id="@+id/pending_due_val"
+        android:text="0 /-"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/img_view"
+        android:layout_below="@id/pending_due_hd"
+        android:textSize="16sp"
+        android:textColor="#f9f8ed" />
+
+</RelativeLayout>

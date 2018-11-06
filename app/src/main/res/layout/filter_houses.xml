@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.elookups.tenanttrackingapplication.FilterHouse">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/scrollView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical" android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="@dimen/fab_margin"
+            android:background="#b971e7">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select House Sizes:-"
+                android:textSize="20sp"
+                android:textColor="#b971e7"
+                android:layout_marginBottom="2dp"
+                android:background="#f9f8ed"
+                android:gravity="left"/>
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Studio"
+                android:id="@+id/studioCheck"
+                android:textColor="#ffffff"
+                android:gravity="left"
+                android:checked="true"
+                android:textSize="20sp"
+                android:layout_marginBottom="2dp"
+                android:layout_gravity="center_horizontal" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1 BHK"
+                android:id="@+id/oneBhkCheck"
+                android:layout_below="@+id/studioCheck"
+                android:textColor="#ffffff"
+                android:gravity="left"
+                android:checked="true"
+                android:textSize="20sp"
+                android:layout_marginBottom="2dp"
+                android:layout_gravity="center_horizontal" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2 BHK"
+                android:id="@+id/twoBhkCheck"
+                android:layout_below="@+id/oneBhkCheck"
+                android:textColor="#ffffff"
+                android:gravity="left"
+                android:checked="true"
+                android:textSize="20sp"
+                android:layout_marginBottom="2dp"
+                android:layout_gravity="center_horizontal" />
+
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3 BHK"
+                android:id="@+id/threeBhkCheck"
+                android:layout_below="@+id/twoBhkCheck"
+                android:textColor="#ffffff"
+                android:gravity="left"
+                android:checked="true"
+                android:textSize="20sp"
+                android:layout_marginBottom="2dp"
+                android:layout_gravity="center_horizontal" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="> 3 BHK"
+                android:id="@+id/moreBhkCheck"
+                android:layout_below="@+id/threeBhkCheck"
+                android:textColor="#ffffff"
+                android:gravity="left"
+                android:checked="true"
+                android:textSize="20sp"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Choose Availability:-"
+                android:textSize="20sp"
+                android:textColor="#b971e7"
+                android:layout_marginBottom="2dp"
+                android:background="#f9f8ed"
+                android:gravity="left"/>
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/availabilityRadios"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="All Rent Houses"
+                    android:id="@+id/allRentHouses"
+                    android:textColor="#ffffff"
+                    android:layout_gravity="left"
+                    android:checked="true"
+                    android:textSize="20sp"
+                    android:onClick="availabilityRadio"
+                    android:layout_marginBottom="2dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Available For Family"
+                    android:id="@+id/availableForFamily"
+                    android:textColor="#ffffff"
+                    android:layout_gravity="left"
+                    android:textSize="20sp"
+                    android:onClick="availabilityRadio"
+                    android:layout_marginBottom="2dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Available For Sharing"
+                    android:id="@+id/availableForSharing"
+                    android:textColor="#ffffff"
+                    android:layout_gravity="left"
+                    android:textSize="20sp"
+                    android:onClick="availabilityRadio"
+                    android:layout_marginBottom="2dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Partly Filled Shared"
+                    android:id="@+id/partlyFilledShared"
+                    android:textColor="#ffffff"
+                    android:layout_gravity="left"
+                    android:textSize="20sp"
+                    android:onClick="availabilityRadio"
+                    android:layout_marginBottom="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+            </RadioGroup>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Apply Filter"
+                android:id="@+id/applyHouseFilter"/>
+
+        </LinearLayout>
+    </ScrollView>
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:title="Add New Rent House" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:title="List Of Rent Houses" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:title="List Of Tenants" />
+        <item
+            android:id="@+id/nav_manage"
+            android:title="Change PIN" />
+    </group>
+
+    <item android:title="App Data">
+        <menu>
+            <item
+                android:id="@+id/import_app_data"
+                android:title="Import App Data" />
+            <item
+                android:id="@+id/export_app_data"
+                android:title="Export App Data" />
+        </menu>
+    </item>
+
+</menu>
